@@ -12,6 +12,9 @@ add_action( 'underpin/before_setup', function ( $file, $class ) {
 		if ( ! defined( 'UNDERPIN_DEBUG_BAR_EXTENSION_ROOT_DIR' ) ) {
 			define( 'UNDERPIN_DEBUG_BAR_EXTENSION_ROOT_DIR', plugin_dir_path( __FILE__ ) );
 		}
+		if ( ! class_exists( 'Debug_Bar_Panel' ) ) {
+			return;
+		}
 		require_once( UNDERPIN_DEBUG_BAR_EXTENSION_ROOT_DIR . 'lib/factories/Debug_Bar_Panel_Instance.php' );
 		require_once( UNDERPIN_DEBUG_BAR_EXTENSION_ROOT_DIR . 'lib/factories/Debug_Bar_Panel_Logger_Instance.php' );
 		require_once( UNDERPIN_DEBUG_BAR_EXTENSION_ROOT_DIR . 'lib/loaders/Debug_Bars.php' );
