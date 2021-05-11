@@ -1,0 +1,17 @@
+{
+  "name": "underpin/debug-bar-extension",
+  "description": "Extension to integrate Debug Bar in Underpin",
+  "type": "library",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Alex Standiford",
+      "email": "a@alexstandiford.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "debug-bar.php"
+    ]
+  }
+}
