@@ -27,6 +27,11 @@ add_action( 'underpin/before_setup', function ( $file, $class ) {
 // When a logger instance is added, also add a debug bar instance.
 add_action( 'underpin/loader_registered', function ( $key, $value, $loader, $parent_id ) {
 	add_action( 'plugins_loaded', function () use ( $parent_id, $loader, $key ) {
+
+		if ( ! class_exists( 'Debug_Bar_Panel' ) ) {
+			return;
+		}
+
 		if ( $loader === 'Underpin_Logger\Loaders\Logger' ) {
 			$name = Underpin::get_by_id( $parent_id )->name;
 
