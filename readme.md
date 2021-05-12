@@ -24,7 +24,7 @@ This plugin will automatically log any logger events. Simply installing the exte
 choice is sufficient.
 
 1. Install Underpin. See [Underpin Docs](https://www.github.com/underpin-wp/underpin)
-1. Install any of the supported plugins mentioend below.
+1. Install any of the supported plugins mentioned below.
 
 ## Supported Plugins
 
