@@ -59,5 +59,5 @@ add_action( 'underpin/loader_registered', function ( $key, $value, $loader, $par
 }, 10, 4 );
 
 add_action( 'underpin/logger/after_logged_item', function ( \Underpin_Logger\Factories\Log_Item $logged_item, $logger ) {
-	do_action( 'qm/' . $logger->psr_level, $logged_item->code . ':' . $logged_item->message . "\n" . json_encode( $logged_item->data ) );
+	do_action( 'qm/' . $logger->psr_level, $logged_item->code . ':' . $logged_item->message . "\n" . json_encode( $logged_item->data, JSON_PRETTY_PRINT ) );
 }, 10, 2 );
