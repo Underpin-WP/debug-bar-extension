@@ -60,7 +60,7 @@ add_action( 'underpin/loader_registered', function ( $key, $value, $loader, $par
 
 add_action( 'underpin/logger/after_logged_item', function ( \Underpin_Logger\Factories\Log_Item $logged_item, $logger ) {
 	ob_start();
-	var_dump( $logged_item->data );
+	json_encode( $logged_item->data );
 
 	do_action( 'qm/' . $logger->psr_level, $logged_item->code . ':' . $logged_item->message . "\n" . ob_get_clean() );
 }, 10, 2 );
