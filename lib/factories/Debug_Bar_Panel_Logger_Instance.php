@@ -31,7 +31,7 @@ class Underpin_Debug_Bar_Panel_Logger_Instance extends Underpin_Debug_Bar_Panel_
 	}
 
 	function debug_bar_classes( $classes ) {
-		if ( true === $this->get_logger()->write_to_log && count( $this->get_logger() ) > 0 ) {
+		if ( in_array( $this->get_logger()->psr_level, [ 'emergency', 'alert', 'critical', 'error' ] ) && count( $this->get_logger() ) > 0 ) {
 			$classes[] = 'debug-bar-php-warning-summary';
 		}
 		return $classes;

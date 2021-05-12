@@ -57,3 +57,10 @@ add_action( 'underpin/loader_registered', function ( $key, $value, $loader, $par
 		}
 	} );
 }, 10, 4 );
+
+add_action( 'underpin/logger/after_logged_item', function ( \Underpin_Logger\Factories\Log_Item $logged_item, $logger ) {
+	ob_start();
+	var_export( $logged_item->data );
+
+	do_action( 'qm/' . $logger->psr_level, $logged_item->code . ':' . $logged_item->message . "\n" . ob_get_clean() );
+}, 10, 2 );
