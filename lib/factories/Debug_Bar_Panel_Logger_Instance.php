@@ -19,7 +19,7 @@ class Underpin_Debug_Bar_Panel_Logger_Instance extends Underpin_Debug_Bar_Panel_
 	}
 
 	public function prerender() {
-		$this->set_visible( true );
+		$this->set_visible( count( $this->get_logger() ) > 0 );
 	}
 
 	public function get_logger() {
