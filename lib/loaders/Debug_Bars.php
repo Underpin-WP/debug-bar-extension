@@ -2,14 +2,14 @@
 
 namespace Underpin_Debug_Bar_Extension\Loaders;
 
-use Underpin\Abstracts\Registries\Loader_Registry;
+use Underpin\Abstracts\Registries\Object_Registry;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
 
-class Debug_Bars extends Loader_Registry {
+class Debug_Bars extends Object_Registry {
 
 	protected $default_factory   = 'Underpin_Debug_Bar_Panel_Instance';
 	protected $abstraction_class = '\Debug_Bar_Panel';

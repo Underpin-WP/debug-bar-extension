@@ -9,7 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Underpin_Debug_Bar_Panel_Logger_Instance extends Underpin_Debug_Bar_Panel_Instance {
 
-	use \Underpin\Traits\With_Parent;
 	use \Underpin\Traits\Templates;
 
 	protected $logger_key;
