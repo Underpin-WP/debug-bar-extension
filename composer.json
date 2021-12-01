@@ -10,6 +10,7 @@
     }
   ],
   "autoload": {
+    "psr-4": {"Underpin\\Debug_Bar_Extension\\":  "lib/"},
     "files": [
       "debug-bar.php"
     ]
